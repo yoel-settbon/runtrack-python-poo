@@ -2,8 +2,6 @@
 valeur des attributs “nombre1” et “nombre2”. Résulat attendu : Le nombre1 est 12 // Le nombre2 est 3"""
 
 
-
-
 from job01 import Operation
 
 operation1 = Operation(12, 3)
