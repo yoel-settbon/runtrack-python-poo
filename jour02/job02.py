@@ -3,6 +3,7 @@ class Livre:
         self._titre = titre
         self._auteur = auteur
         self.set_pages(pages)
+        self._disponible = True
 
     def get_titre(self):
         return self._titre
@@ -21,8 +22,23 @@ class Livre:
         else:
             print("Erreur : Le nombre de pages doit être un entier positif.")
             self._pages = 0
+    
+    def verification(self):
+        return self._disponible
+    def emprunter(self):
+        if self.verification():
+            self._disponible = False
+            print(f"Le livre '{self.get_titre()}' a été emprunté.")
+        else:
+            print(f"Le livre '{self.get_titre()}' n'est pas disponible.")
+    def rendre(self):
+        if not self.verification():
+            self._disponible = True
+            print(f"Le livre '{self.get_titre()}' a été rendu.")
+        else:
+            print(f"Le livre '{self.get_titre()}' n'a pas été emprunté.")
 
-livre = Livre("1984", "George Orwell", 328)
+livre = Livre("MAUS", "Art Spiegleman", 328)
 print(livre.get_titre())
 print(livre.get_auteur())
 
