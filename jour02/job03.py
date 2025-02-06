@@ -1,4 +1,4 @@
-from job02 import Livre
+from jour03.job02 import Livre
 
 livre = Livre("MAUS","Art Spiegleman", 100)
 
