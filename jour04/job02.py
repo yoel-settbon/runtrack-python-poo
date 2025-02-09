@@ -1,4 +1,4 @@
-from job01 import Personne, Eleve, Professeur
+from jour05.job01 import Personne, Eleve, Professeur
 
 eleve = Eleve()
 
